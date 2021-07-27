@@ -1,0 +1,241 @@
+.footer__nav {
+  @include flexContainerConfig(row, nowrap, center, flex-start);
+  border-bottom: 1px solid $c-neut4;
+  padding-bottom: calc(100vw * (29 / 1366));
+  margin: 0 calc(100vw * (35 / 1366));
+  &__subscribeText {
+    width: calc(100vw * (294 / 1366));
+    margin-top: calc(100vw * (39 / 1366));
+    margin-right: calc(100vw * (80 / 1366));
+    h3 {
+      @include typoSet($fw-medium , $fsz-prices1, $flh-subtitle, $ft-main);
+      color: $c-main2;
+      span {
+        @include typoSet($fw-medium, $fsz-subtitle, $flh-subtitle, $ft-main);
+        color: $c-main1;
+        margin-right: calc(100vw * (9 / 1366));
+        margin-bottom: calc(100vw * (7 / 1366));
+
+      }
+    }
+  }
+  &__subscribe {
+    position: relative;
+    padding-top: calc(100vw * (31 / 1366));
+    width: fit-content;
+    height: fit-content;
+    &__form {
+      &__input {
+        border-top-left-radius: calc(100vw * (100 / 1366));
+        border-bottom-left-radius: calc(100vw * (100 / 1366));
+        border: none;
+        margin: 0;
+        padding: 0;
+        padding-left: calc(100vw * (27.64 / 1366));
+        width: calc(100vw * (393 / 1366));
+        height: calc(100vw * (48 / 1366));
+        @include typoSet($fw-regular, $fsz-prices2, $flh-prices1, $ft-main);
+        background-color: $c-neut7;
+        &:focus {
+          outline: none;
+        }
+        &:hover {
+          cursor: text;
+        }
+      }
+      &__submit {
+        border-radius: 0 calc(100vw * (100 / 1366)) calc(100vw * (100 / 1366)) 0;
+        position: relative;
+        left: calc(-100vw * (5 / 1366));
+        @include typoSet($fw-regular, $fsz-prices2, $flh-prices1, $ft-main);
+        width: calc(100vw * (121 / 1366));
+        height: calc(100vw * (47 / 1366));
+        color: $c-neut7;
+        background-color: $c-main1;
+        &:hover {
+          background-color: $c-main2;
+          cursor: pointer;
+        }
+      }
+      &__checkbox {
+        position: absolute;
+        top: calc(100vw * (91 / 1366));
+        left: 0;
+        margin: 0;
+        opacity: 0;
+        width: calc(100vw * (18 / 1366));
+        height: calc(100vw * (18 / 1366));
+        z-index: 10;
+        &:hover {
+          cursor: pointer;
+        }
+        &:checked ~ .footer__nav__subscribe__form__checkboxStyle {
+          background-color: $c-main1;
+          background-image: url(../assets/svg/iconos_SVGs/checked_SVGs/checked-init.svg);
+          background-position: center;
+          background-repeat: no-repeat;
+        }
+      }
+      &__checkboxStyle {
+        border-radius: 50%;
+        border:1px solid $c-main1;
+        position: absolute;
+        left: 0;
+        top: calc(100vw * (91 / 1366));
+        width: calc(100vw * (18 / 1366));
+        height: calc(100vw * (18 / 1366));
+        z-index: 1;
+        background-color: $c-neut7;
+      }
+      &__checkboxLabel {
+        display: block;
+        margin-top: calc(100vw * (17 / 1366));
+        margin-left: calc(100vw * (28.4 / 1366));
+        padding-bottom: calc(100vw * (2 / 1366));
+        @include typoSet($fw-regular, $fsz-body, $flh-body , $ft-main);
+        width: fit-content;
+        color: $c-main2;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  &__socialMedia {
+    @include flexContainerConfig(column, nowrap, center, center);
+    margin-left: calc(100vw * (88 / 1366));
+    padding-top: calc(100vw * (39 / 1366));
+    h2 {
+      @include typoSet($fw-medium , $fsz-prices1, $flh-subtitle, $ft-main);
+      color: $c-main2;  
+    }
+    &__links {
+      overflow-y: hidden;
+      @include flexContainerConfig(row, nowrap, center, center);
+      padding-top: calc(100vw * (14 / 1366));
+      a {
+        margin: 0 calc(100vw * (8.5 /1366));
+        overflow: hidden;
+        z-index: 100;
+        &:hover {
+          cursor: pointer;
+          svg path {
+            fill: $c-main1;
+            &:hover {
+              cursor: pointer;
+            }
+          }
+        }
+        svg {
+          width: calc(100vw * (20 / 1366));
+          height: calc(100vw * (20 / 1366));
+          &:hover {
+            cursor: pointer;
+            fill: $c-main1;
+          }
+        }
+        &:nth-of-type(4) svg {
+          width: calc(100vw * (22 / 1366));
+          height: calc(100vw * (17 / 1366));
+        }
+        &:nth-of-type(5) svg {
+          width: calc(100vw * (19 / 1366));
+          height: calc(100vw * (19 / 1366));
+        }
+      }
+    }
+  }
+}
+// ******************************************************************************
+// ******************************************************************************
+// *************************MEDIA QUERIES****************************************
+@media screen and (max-width: 768px) {
+  .footer__nav {
+    @include flexContainerConfig(column, nowrap, center, center);
+    border-width: 2px;
+    margin: 0 calc(100vw * (22 / 375));
+    padding-bottom: calc(100vw * (25 / 375));
+    &__subscribeText {
+      margin: unset;
+      margin-top: calc(100vw * (27 / 375));
+      width: 90%;
+      h3 {
+        @include typoSet($fw-medium , $fsz-prices1Mobile, normal, $ft-main);
+        span {
+          @include typoSet($fw-medium, $fsz-subtitleMobile, normal, $ft-main);
+          color: $c-main1;
+          margin-right: calc(100vw * (9 / 1366));
+          margin-bottom: calc(100vw * (7 / 1366));
+  
+        }
+      }
+    }
+    &__subscribe {
+      padding-top: calc(100vw * (26 / 375));
+      &__form {
+        &__input {
+          width: calc(100vw * (199 / 375));
+          height: calc(100vw * (47 / 375));
+          @include typoSet($fw-regular, $fsz-bodyMobile, normal, $ft-main);
+        }
+        &__submit {
+          @include typoSet($fw-medium, $fsz-prices2Mobile, normal, $ft-main);
+          left: calc(-100vw * (4 / 375));
+          width: calc(100vw * (125 / 375));
+          height: calc(100vw * (47 / 375));
+        }
+        &__checkbox {
+          position: absolute;
+          top: calc(100vw * (83 / 375));
+          left: 0;
+          margin: 0;
+          opacity: 0;
+          width: calc(100vw * (18 / 375));
+          height: calc(100vw * (18 / 375));
+          z-index: 10;
+        }
+        &__checkboxStyle {
+          top: calc(100vw * (83 / 375));
+          width: calc(100vw * (18 / 375));
+          height: calc(100vw * (18 / 375));
+        }
+        &__checkboxLabel {
+          margin-top: calc(100vw * (10 / 375));
+          margin-left: calc(100vw * (28.4 / 375));
+          padding-bottom: calc(100vw * (14 / 375));
+          @include typoSet($fw-regular, $fsz-bodyMobile, normal, $ft-main);
+        }
+      }
+    }
+    &__socialMedia {
+      width: 100%;
+      margin: unset;
+      padding: unset;
+      h2 {
+        @include typoSet($fw-medium , $fsz-subtitleMobile, normal, $ft-main);
+      }
+      &__links {
+        display: flex;
+        width: 100%;
+        // @include flexContainerConfig(row, nowrap, center, flex-start);
+        padding-top: calc(100vw * (16 / 375));
+        a {
+          margin: unset;
+          margin: 0 calc(100vw * (12 /375));
+          svg {
+            width: calc(100vw * (20 / 375));
+            height: calc(100vw * (20 / 375));
+          }
+          &:nth-of-type(4) svg {
+            width: calc(100vw * (22 / 375));
+            height: calc(100vw * (17 / 375));
+          }
+          &:nth-of-type(5) svg {
+            width: calc(100vw * (19 / 375));
+            height: calc(100vw * (19 / 375));
+          }
+        }
+      }
+    }
+  }
+}

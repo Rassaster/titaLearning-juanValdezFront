@@ -1,0 +1,25 @@
+// 1-base. Reajustando estilos; eliminando todos los valores dados por defecto en los navegadores:
+@import "1-base/0-reset";
+// 1-base
+@import "1-base/1-variables";
+@import "1-base/2-mixins";
+@import "1-base/3-Rasslider";
+@import "1-base/4-globals";
+// 2-generalLayout
+@import "2-generalLayout/1-header";
+@import "2-generalLayout/2-main";
+@import "2-generalLayout/3-footer";
+// 3-sections
+@import "3-sections/1-topBanner";
+@import "3-sections/2-logoHeader";
+@import "3-sections/3-userNav";
+@import "3-sections/4-siteNav";
+@import "3-sections/5-bannerMain";
+@import "3-sections/6-showcasePromo";
+@import "3-sections/7-showcaseCategories";
+@import "3-sections/8-showcaseHighlights";
+@import "3-sections/9-bannerAds";
+@import "3-sections/10-showcaseNewReleases";
+@import "3-sections/11-footerNav";
+@import "3-sections/12-fotterFurtherInfo";
+@import "3-sections/13-footerCompanies";

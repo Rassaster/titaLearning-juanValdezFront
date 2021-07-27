@@ -1,0 +1,63 @@
+.section__bannerAds {
+  @include flexContainerConfig(row, nowrap, center, center);
+  position: relative;
+  width: 100vw;
+  padding-bottom: calc(100vw * (40 / 1366));
+  &__text {
+    position: absolute;
+    width: calc(100vw * ( 244 / 1366));
+    height: calc(100vw * ( 252 / 1366));
+    top: calc(100vw * ( 64 / 1366));
+    left: calc(100vw * ( 267 / 1366));
+    &:nth-of-type(2) {
+      display: none;
+    }
+  }
+  &__backgroundImg{
+    width: calc(100vw * (1296 / 1366));
+    height: calc(100vw * (360 / 1366));
+    justify-content: center;
+    &:nth-of-type(4) {
+      display: none;
+    }
+  }
+  &__button {
+    display: none;
+    position: absolute;
+  }
+}
+// ******************************************************************************
+// ******************************************************************************
+// *************************MEDIA QUERIES****************************************
+@media screen and (max-width: 768px) {
+  .section__bannerAds {
+    padding-bottom: calc(100vw * (35 / 375));
+    &__text {
+      width: calc(100vw * (200/ 375));
+      height: calc(100vw * ( 70 / 375));
+      top: calc(100vw * (25 / 375));
+      left: calc(100vw * (0 / 375));
+      &:nth-of-type(1) {
+        display: none;
+      }
+      &:nth-of-type(2) {
+        display: block;
+      }
+    }
+    &__backgroundImg{
+      width: calc(100vw * (340 / 375));
+      height: calc(100vw * (280 / 375));
+      justify-content: center;
+      &:nth-of-type(3) {
+        display: none;
+      }
+      &:nth-of-type(4) {
+        display: block;
+      }
+    }
+    &__button {
+      display: flex;
+      bottom: calc(100vw * (45 / 375));
+    }
+  }
+}

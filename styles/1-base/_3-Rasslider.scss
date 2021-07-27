@@ -1,0 +1,80 @@
+/* ------------------------------------------------- */
+/* ------------------------------------------------- */
+.Rasslider {
+  border: 1px solid brown;
+  position: relative;
+  width: 100vw;
+  &__wrapper {
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    background-position: center;
+    background-size: cover;
+    background-color: unset;
+    background-repeat: no-repeat;
+
+    border: 1px solid blue;
+    display: flex;
+    width: unset;
+    scroll-snap-type: x mandatory;
+    overflow-x: scroll;
+    overflow : hidden;
+    &::-webkit-scrollbar {
+      display: none;
+      overflow-y: hidden;
+    }
+    &__element {
+      border: 1px solid greenyellow;
+      margin: calc(100vw * (49 / 1366)) calc(100vw * (37 / 1366)) calc(100vw * (34 / 1366)) calc(100vw * (37 / 1366));
+      min-width: 196px;
+      width: calc(100vw * (196 / 1366));
+      height: calc(100vw * (197 / 1366));
+      scroll-snap-align: center;
+    }
+  }
+  &__prevButton, &__nextButton {
+    border: 1px solid red;
+    position: absolute;
+    top: 50%;
+    z-index: 100;
+    &:hover {
+      background-color: blue;
+      cursor: pointer;
+    }
+  }
+  &__prevButton {
+    left: 0;
+  }
+  &__nextButton {
+    right: 0;
+  }
+  &__paginator {
+    border: 1px solid burlywood;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    margin: auto;
+    &__circle {
+      border-radius: 50%;
+      margin: 0 calc(100vw * (8 / 1366));
+      min-width: 8px;
+      width: calc(100vw * (12 / 1366));
+      min-height: 8px;
+      height: calc(100vw * (12 / 1366));
+      border: 1px solid;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+/* ------------------------------------------------- */
+/* ------------------------------------------------- */
+@media screen and (max-width: 768px) {
+  .Rasslider {
+    &__wrapper {
+      overflow: scroll;
+    }
+  }
+}

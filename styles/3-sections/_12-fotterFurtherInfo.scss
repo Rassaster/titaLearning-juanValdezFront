@@ -1,0 +1,240 @@
+.footer__furtherInfo {
+  @include flexContainerConfig(row, nowrap, center, flex-start);
+  padding-top: calc(100vw * (40 / 1366));
+  padding-bottom: calc(100vw * (65 / 1366));
+  &__logoJV {
+    margin-top: calc(100vw * (27 / 1366));
+    margin-right: calc(100vw * (79 / 1366));
+    width: calc(100vw * (239 / 1366));
+    height: calc(100vw * (120 / 1366));
+  }
+  &__contact {
+    h2 {
+      display: none;
+    }
+    &__menu {
+      margin-right: calc(100vw * (57 / 1366));
+      @include flexContainerConfig(column, nowrap, center, flex-start);
+      width: calc(100vw * (243 / 1366));
+      color: $c-main2;
+      h2 {
+        display: block;
+        margin-bottom: calc(100vw * (18 / 1366));
+        @include typoSet($fw-medium, $fsz-subtitle, normal, $ft-main);
+      }
+      h5 {
+        margin-bottom: calc(100vw * (12 / 1366));
+        @include typoSet($fw-regular, $fsz-prices2, $flh-prices1 , $ft-main);
+        &:nth-of-type(1)::before {
+          display: inline-block;
+          padding-right: calc(100vw * (10 / 1366));
+          content: ' ';
+          background-image: url(../assets/svg/redes_sociales_SVGs/wa2-init.svg);
+          background-size: calc(100vw * (15 / 1366)) calc(100vw * (15 / 1366));
+          background-position: center;
+          background-repeat: no-repeat;
+          width: calc(100vw * (15 / 1366));
+          height: calc(100vw * (15 / 1366));
+        }
+      }
+      a {
+        @include typoSet($fw-regular, $fsz-prices2, $flh-prices1, $ft-main);
+      &:hover {
+        cursor: pointer;
+        color: $c-main1;
+        }
+      }
+    }
+  }
+  &__legal {
+    h2 {
+      display: none;
+    }
+    &__menu {
+      margin-right: calc(100vw * (101 / 1366));
+      @include flexContainerConfig(column, nowrap, center, flex-start);
+      width: calc(100vw * (188 / 1366));
+      color: $c-main2;
+      h2 {
+        display: block;
+        margin-bottom: calc(100vw * (18 / 1366));
+        @include typoSet($fw-medium, $fsz-subtitle, normal, $ft-main);
+      }
+      a {
+        margin-bottom: calc(100vw * (12 / 1366));
+        @include typoSet($fw-regular, $fsz-prices2, $flh-prices1 , $ft-main);
+        &:hover {
+          cursor: pointer;
+          color: $c-main1;
+        }
+        &:last-child {
+          margin: unset;
+        }
+      }
+    }
+  }
+  &__locateStore {
+    position: relative;
+    @include flexContainerConfig(column, nowrap, center, flex-start);
+    width: calc(100vw * (200 / 1366));
+    color: $c-main2;
+    h2 {
+      @include typoSet($fw-medium, $fsz-subtitle, normal, $ft-main);
+      margin-bottom: calc(100vw * (18 / 1366));
+    }
+    &__geo {
+      width: 100%;
+      position: relative;
+      &:hover {
+        .footer__furtherInfo__locateStore__geo__cities {
+          cursor: pointer;
+          display: flex;
+        }
+        h5 {
+          cursor: pointer;
+          color: $c-main1;
+          &::after {
+            background-image: url(../assets/svg/controles_SVGs/openMenu-hover.svg);
+            transform: rotate(180deg);
+          }
+        }
+      }
+      h5 {
+        @include typoSet($fw-regular, $fsz-prices2, $flh-prices1 , $ft-main);
+        &::before {
+          position: relative;
+          top: calc(100vw * (4 / 1366));
+          padding-right: calc(100vw * (10 / 1366));
+          display: inline-block;
+          content: ' ';
+          background-image: url(../assets/svg/iconos_SVGs/ubicaTuTienda_SVGs/ubicacion-init.svg);
+          background-size: contain;
+          background-position: center;
+          background-repeat: no-repeat;
+          width: calc(100vw * (18 / 1366));
+          height: calc(100vw * (20 / 1366));
+        }
+        &::after {
+          padding-left: calc(100vw * (10 / 1366));
+          display: inline-block;
+          content: ' ';
+          background-image: url(../assets/svg/controles_SVGs/openMenu-init.svg);
+          background-size: calc(100vw * (12 / 1366)) calc(100vw * (6 / 1366));
+          background-position: center;
+          background-repeat: no-repeat;
+          width: calc(100vw * (12 / 1366));
+          height: calc(100vw * (10 / 1366));
+        }
+      }
+      &__cities {
+        display: none;
+        position: absolute;
+        top: calc(100vw * (-10 / 1366));
+        padding-top: calc(100vw * (35 / 1366));
+        margin-top: calc(100vw * (5 / 1366));
+        width: 100%;
+        @include flexContainerConfig(column, nowrap, center, flex-start);
+        a {
+          border-bottom: 3px solid $c-neut8;
+          margin-bottom: calc(100vw * (8 / 1366));
+          width: 20%;
+          @include typoSet($fw-regular, $fsz-prices2, $flh-prices1 , $ft-main);
+          color: $c-main2;
+          width: 100%;
+          &:hover {
+            color: $c-main1;
+            border-color:  $c-main1;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
+
+// ******************************************************************************
+// ******************************************************************************
+// *************************MEDIA QUERIES****************************************
+@media screen and (max-width: 768px) {
+  .footer__furtherInfo {
+    @include flexContainerConfig(column, nowrap, center, flex-start);
+    padding-top: calc(100vw * (30 / 375));
+    padding-bottom: calc(100vw * (30 / 375));
+    &__logoJV {
+      display: none;
+    }
+    &__contact {
+      @include flexContainerConfig(column, nowrap, center, flex-start);
+      padding-left: calc(100vw * (35 / 375));
+      h2 {
+        display: block;
+        margin-bottom: calc(100vw * (30 / 375));
+        width: calc(100vw * (290 / 375));
+        @include typoSet($fw-medium, $fsz-subtitleMobile, normal, $ft-main);
+        color: $c-main2;
+        &::after {
+          margin-left: calc(100vw * (187 / 375));
+          display: inline-block;
+          content: ' ';
+          background-image: url(../assets/svg/controles_SVGs/openMenu-init.svg);
+          background-size: calc(100vw * (12 / 375)) calc(100vw * (6 / 375));
+          background-position: center;
+          background-repeat: no-repeat;
+          width: calc(100vw * (12 / 375));
+          height: calc(100vw * (10 / 375));
+        }
+      }
+      &__menu {
+        display: none;
+      }
+    }
+    &__legal {
+      @include flexContainerConfig(column, nowrap, center, flex-start);
+      padding-left: calc(100vw * (35 / 375));
+      h2 {
+        display: block;
+        margin-bottom: calc(100vw * (30 / 375));
+        width: calc(100vw * (290 / 375));
+        @include typoSet($fw-medium, $fsz-subtitleMobile, normal, $ft-main);
+        color: $c-main2;
+        &::after {
+          margin-left: calc(100vw * (222 / 375));
+          display: inline-block;
+          content: ' ';
+          background-image: url(../assets/svg/controles_SVGs/openMenu-init.svg);
+          background-size: calc(100vw * (12 / 375)) calc(100vw * (6 / 375));
+          background-position: center;
+          background-repeat: no-repeat;
+          width: calc(100vw * (12 / 375));
+          height: calc(100vw * (10 / 375));
+        }
+      }
+      &__menu {
+        display: none;
+      }
+    }
+    &__locateStore {
+      @include flexContainerConfig(column, nowrap, center, flex-start);
+      padding-left: calc(100vw * (35 / 375));
+      h2 {
+        width: calc(100vw * (290 / 375));
+        @include typoSet($fw-medium, $fsz-subtitleMobile, normal, $ft-main);
+        color: $c-main2;
+        &::after {
+          margin-left: calc(100vw * (134 / 375));
+          display: inline-block;
+          content: ' ';
+          background-image: url(../assets/svg/controles_SVGs/openMenu-init.svg);
+          background-size: calc(100vw * (12 / 375)) calc(100vw * (6 / 375));
+          background-position: center;
+          background-repeat: no-repeat;
+          width: calc(100vw * (12 / 375));
+          height: calc(100vw * (10 / 375));
+        }
+      }
+      &__geo {
+        display: none;
+      }
+    }
+  }
+}

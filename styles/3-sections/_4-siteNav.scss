@@ -1,0 +1,63 @@
+.header__siteNav {
+  @include flexContainerConfig(row, nowrap, center, center);
+  height: calc(100vw * (47 / 1366)); // = 47px / 1366px;
+  overflow: visible;
+  &__siteLinks {
+    @include flexContainerConfig(row, nowrap, space-between, center);
+    @include typoSet($fw-medium, $fsz-prices2, $flh-prices1, $ft-main);
+    width: 100vw;
+    margin-left: calc(100vw * (370 / 1366)); // = 370px / 1366px;
+    margin-right: calc(100vw * (370 / 1366)); // = 370px / 1366px;
+    color: $c-main2;
+    &__dropDown {
+      position: relative;
+      overflow: unset;
+      &:hover {
+        cursor: pointer;
+        .header__siteNav__siteLinks__dropDown__productsMenu {
+          display: flex;
+        }
+      }
+      &__productsMenu {
+        display: none;
+        @include flexContainerConfig(column, nowrap, flex-start, flex-start);
+        @include typoSet($fw-regular, $fsz-body, $flh-body, $ft-main);
+        position: absolute;
+        top: calc(100vw * (18 / 1366));
+        left: calc(100vw * (-38 / 1366));
+        padding: calc(100vw * (28/ 1366)) 0;
+        padding-right: calc(100vw * (69 / 1366));
+        padding-left: calc(100vw * (40 / 1366));
+        width: calc(100vw * (268 / 1366));
+        z-index: 99;
+        color: $c-main2;
+        background-color: $c-sec2;
+        a {
+          border-bottom: calc(100vw * (3 / 1366)) solid $c-sec2;
+          width: calc(100vw * (159 / 1366));
+          margin-bottom: calc(100vw * (22 / 1366));
+          &:last-child {
+            margin: unset;
+          }
+          &:hover {
+            color: $c-main1;
+            border-color: $c-main1;
+            cursor: pointer;
+          }
+        }
+      }
+    };
+    li a:hover {
+      color: $c-main1;
+      cursor: pointer;
+    };
+  }
+};
+// ******************************************************************************
+// ******************************************************************************
+// *************************MEDIA QUERIES****************************************
+@media screen and (max-width: 768px) {
+  .header__siteNav {
+    display: none;
+  }
+}

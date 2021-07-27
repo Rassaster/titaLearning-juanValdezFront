@@ -1,0 +1,65 @@
+.section__showcaseNewReleases {
+  width: 100vw;
+  padding-bottom: calc(100vw * (45 / 1366));
+  &__slider {
+    border: none;
+    position: relative;
+    margin-top: calc(100vw * (40 / 1366));
+    &__wrapper {
+      border: none;
+      @include flexContainerConfig(row, nowrap, space-between, center);
+      margin-left: calc(100vw * (117 / 1366));
+      margin-right: calc(100vw * (118 / 1366));
+      &__product {
+        border: none;
+        margin: calc(100vw * (0 / 1366)) calc(100vw * (15 / 1366)) calc(100vw * (0 / 1366));
+      }
+      &__product:first-child {
+        margin-left: 0;
+      }
+    };
+    &__paginator {
+      border: none;
+      margin-top: calc(100vw * (40 / 1366));
+      &__circle {
+        &__active {
+          border: 1px solid $c-main1;
+          background-color: $c-main1;
+        }
+      }
+    }
+    .slider_button {
+      top: calc(100vw * (260 / 1366));
+    };
+  };
+};
+// ******************************************************************************
+// ******************************************************************************
+// *************************MEDIA QUERIES****************************************
+@media screen and (max-width: 768px) {
+  .section__showcaseNewReleases {
+    h2 {
+      width: 96%;
+      text-align: center;
+
+    }
+    padding-bottom: calc(100vw * (64 / 375));
+    &__slider {
+      margin-top: calc(100vw * (32 / 375));
+      .slider_button {
+        top: calc(100vw * (120 / 375));
+      }
+      &__paginator {
+        display: none;
+      }
+      &__wrapper {
+        margin: 0;
+        &__product {
+          margin: calc(100vw * (0 / 375)) calc(100vw * (10 / 375)) calc(100vw * (0 / 375));
+          scroll-snap-align: center;
+          padding-left: calc(100vw * (5 / 375));
+        }
+      }
+    }
+  } 
+}

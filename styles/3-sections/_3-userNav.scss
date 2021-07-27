@@ -1,0 +1,209 @@
+.header__userNav {
+  @include flexContainerConfig(row, nowrap, flex-start, center);
+  position: relative;
+  width: 100vw;
+  height: calc(100vw * (90 / 1366)); // = 90px / 1366px;
+}; 
+.header__mobileNav {
+  display: none;
+}
+.header__userSearch {
+  // @include flexContainerConfig(row, nowrap, space-evenly, center);
+  margin-left: calc(100vw * (449 / 1366)); // = 449px / 1366px;
+  padding-left: calc(100vw * (8 / 1366)); // = 8px / 1366px;
+  width: calc(100vw * (514 / 1366)); // = 514px / 1366px;
+  height: calc(100vw * (40 / 1366)); // = 40px / 1366px;
+  border-radius: calc(100vw * (20 / 1366)); // = 20px / 1366px
+  background-color: $c-neut7;
+  &__button {
+    @include flexContainerConfig(row, nowrap, center, center);
+    width: calc(100vw * (40 / 1366)); // = 40px / 1366px;
+    height: 100%;
+    padding-right: calc(100vw * (5 / 1336)); // = 5px / 1366px;
+    .header__userSearch-svg {
+      width: calc(100vw * (18 / 1366)); // = 18px / 1366px;
+      height: calc(100vw * (18 / 1366)); // = 18px / 1366px;
+      use {
+        fill: $c-main2;
+      };
+    }; 
+    &:hover {
+      cursor: pointer;
+      .header__userSearch-svg use {
+      fill: $c-main1;
+      };
+    };
+  };
+  &__textInput {
+    @include typoSet($fw-regular, $fsz-prices2, $flh-prices1, $ft-main);
+    padding: 0;
+    border: none;
+    height: 100%;
+    width: 100%;
+    background-color: unset;
+    &:focus {
+      outline: none;
+    };
+    &:hover {
+      cursor: text;
+    }
+  };
+};
+// 
+.header__userLinks-ctn {
+  @include flexContainerConfig(row, nowrap, space-between, center);
+  margin-left: calc(100vw * (111.55 / 1366)); // = 111.55px / 1366px;
+  margin-right: calc(100vw * (108 / 1366)); // = 108px / 1366px;
+  flex-grow: 1;
+  .header_userLink {
+    @include flexContainerConfig(row, nowrap, center, center);
+    width: calc(100vw * (26 / 1366)); // =  26px / 1366px;
+    height: calc(100vw * (26 / 1366)) ;// = 26px / 1366px;
+    &:hover svg {
+      cursor: pointer;
+    }
+    &:hover svg path{
+      stroke: $c-main1;
+      cursor: pointer;
+    };
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+    &__cartLink {
+      width: calc(100vw * (32 / 1366)); // =  26px / 1366px;
+      height: calc(100vw * (32 / 1366)) ;// = 26px / 1366px; 
+    };
+  };
+};
+// ******************************************************************************
+// ******************************************************************************
+// *************************MEDIA QUERIES****************************************
+@media screen and (max-width: 768px) {
+  .header__userNav {
+    height: unset;
+    @include flexContainerConfig(row, nowrap, center, center);
+    .header__userSearch {
+      margin: 0;
+      margin-top: calc(100vw * (10 / 375));
+      margin-bottom: calc(100vw * (16 / 375));
+      padding: 0;
+      width: calc(100vw * (327 / 375)); 
+      height: calc(100vw * (40 / 375)); 
+      border-radius: calc(100vw * (20 / 375)); 
+      &__button {
+        @include flexContainerConfig(row, nowrap, center, center);
+        width: calc(100vw * (35 / 375)); 
+        height: 100%;
+        margin-left: calc(100vw * (10 / 375)); 
+        padding-left: calc(100vw * (10 / 375)); 
+        padding-right: calc(100vw * (5 / 375)); 
+        .header__userSearch-svg {
+          width: calc(100vw * (18 / 375)); 
+          height: calc(100vw * (18 / 375));
+        };
+      };
+      &__textInput {
+        @include typoSet($fw-regular, $fsz-prices2Mobile, normal, $ft-main);
+      };
+    }
+    .header__userLinks-ctn {
+      display: none;
+    }
+  }
+  .header__mobileNav {
+    display: flex;
+    position: relative;
+    padding-top: calc(100vw * (34 / 375));
+    padding-bottom: calc(100vw * (34 / 375));
+    border-bottom: 1px solid $c-neut4;
+    @include flexContainerConfig(row, nowrap, space-around, center);
+    &__hamburger {
+      width: calc(100vw * (25 / 375));
+      height: calc(100vw * (25 / 375));
+      background-image: url(../assets/svg/iconos_SVGs/menu_SVGs/menu-init.svg);
+      background-position: top;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    &__logo {
+      width: calc(100vw * (152 / 375));
+      height: calc(100vw * (24 / 375));
+    }
+    &__shoppingCart {
+      width: calc(100vw * (25 / 375));
+      height: calc(100vw * (25 / 375));
+      background-image: url(../assets/svg/iconos_SVGs/carrito_SVGs/carrito-init.svg);
+      background-position: top;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    &__menu {
+      position: absolute;
+      left: -100vw;
+      z-index: 1000;
+      top: -40px;
+      width: 100vw;
+      height: 110vh;
+      background-color: $c-neut1Op;
+      transition: left 0.5s ease-in;
+      &__links {
+        z-index: 1001;
+        position: relative;
+        @include flexContainerConfig(column, nowrap, flex-start, flex-start);
+        background-color: $c-sec2;
+        width: calc(100vw * (303 / 375));
+        height: 110vh;
+        padding: calc(100vw * (50 / 375));
+        padding-top: calc(100vw * (90 / 375));
+        &__close {
+          position: absolute;
+          top: calc(100vw * (10 / 375));
+          left: calc(100vw * (10 / 375));
+          width: calc(100vw * (25 / 375));
+          height: calc(100vw * (25 / 375));
+          background-image: url(../assets/svg/iconos_SVGs/menu_SVGs/cerrar-init.svg);
+          background-position: top;
+          background-repeat: no-repeat;
+          background-size: contain;
+        }
+        &__logo {
+          position: absolute;
+          top: calc(100vw * (40 / 375));
+          align-self: center;
+        }
+        a {
+          width: 80%;
+          @include typoSet($fw-regular, $fsz-prices1Mobile, normal, $ft-main);
+          margin-bottom: calc(100vw * (40 / 375));
+          border-bottom: 2px solid black;
+          &:nth-of-type(1)::after, &:nth-of-type(2)::after {
+            position:  absolute;
+            left: calc(20vw * (100 / 375));
+            display: inline-block;
+            content: " ";
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: calc(100vw * (20 / 375));
+            height: calc(100vw * (20 / 375));
+
+          }
+          &:nth-of-type(1) {
+            &::after {
+              background-image: url(../assets/svg/iconos_SVGs/cuenta_SVGs/cuenta-init.svg);
+            }
+          }
+          &:nth-of-type(2) {
+            &::after {
+              background-image: url(../assets/svg/iconos_SVGs/favoritos_SVGs/favoritos-init.svg);
+            }
+          }
+        }
+      }
+    }
+    .hamburgerIn {
+      left: 0;
+    }
+  }
+}

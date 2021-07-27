@@ -1,0 +1,31 @@
+// ****************************************
+// **** **** **** Tipografía **** **** ****
+@mixin typoSet ($fontWeight, $fontSize, $lineHeight, $font){
+  font: $fontWeight #{$fontSize}/#{$lineHeight} $font;
+}
+// ****************************************
+// **** **** ***** Botones ***** **** ****
+@mixin buttonDefSet ($bgColor, $borderWidth, $borderType, $borderColor) {
+  background-color: $bgColor;
+  border: $borderWidth $borderType $borderColor;
+  border-radius: 100px;
+};
+@mixin buttonHoverSet ($bgColor) {
+  &:hover {
+    background-color: $bgColor;
+  }
+};
+@mixin buttonDefSet ($bgColor, $borderWidth, $borderType, $borderColor) {
+  background-color: $bgColor;
+  border: $borderWidth $borderType $borderColor;
+  &::after {
+    content: "Por favor selecciona un color."
+  }
+};
+// ****************************************
+// **** **** ***** Flex Box ***** **** ****
+@mixin flexContainerConfig($direction, $wrap, $justify, $aligni) {
+  flex-flow: $direction $wrap;
+  justify-content: $justify;
+  align-items: $aligni;
+};

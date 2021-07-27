@@ -1,0 +1,49 @@
+// *************************************
+// *************** FONTS ***************
+$ft-main      : 'Lato', sans-serif;
+$ft-second    : 'DM Sans', sans-serif;
+// Font Weigth:
+$fw-bold      : 900;
+$fw-medium    : 700;
+$fw-regular   : 400;
+$fw-light     : 300;
+// Font Size:
+$fsz-title    : calc(100vw * (30 / 1366)); // 1.875rem; // = 30px;
+$fsz-subtitle : calc(100vw * (20 / 1366)); // 1.25rem; // = 20px;
+$fsz-prices1  : calc(100vw * (16 / 1366)); // 1rem; // = 16px;
+$fsz-prices2  : calc(100vw * (15 / 1366)); // 0.9375rem; // = 15px;
+$fsz-body     : calc(100vw * (14 / 1366)); // 0.875rem; // = 14px;
+$fsz-footer   : calc(100vw * (12 / 1366)); // = 12px;
+$fsz-titleMobile    : calc(100vw * (30 / 375)); // 1.875rem; // = 30px;
+$fsz-subtitleMobile : calc(100vw * (20 / 375)); // 1.25rem; // = 20px;
+$fsz-prices1Mobile  : calc(100vw * (16 / 375)); // 1rem; // = 16px;
+$fsz-prices2Mobile  : calc(100vw * (15 / 375)); // 0.9375rem; // = 15px;
+$fsz-bodyMobile     : calc(100vw * (14 / 375)); // 0.875rem; // = 14px;
+$fsz-footerMobile   : calc(100vw * (12 / 375)); // = 12px;
+
+// Line Height:
+$flh-title    : calc(100vw * (30 / 1366)); // 1.875rem; // = 30px;
+$flh-subtitle : calc(100vw * (20 / 1366)); // 1.25rem; // = 20px;
+$flh-prices1  : calc(100vw * (18 / 1366)); // 1.125rem; // = 18px;
+$flh-prices2  : calc(100vw * (15 / 1366)); // 0.9375rem; // = 15px;
+$flh-body     : calc(100vw * (14 / 1366)); // 0.9375rem; // = 14px;
+// *************************************
+// *************** COLORS **************
+$c-main1      : #C5292C;
+$c-main2      : #411016;
+$c-sec1       : #D70021;
+$c-sec2       : #F4F4F4;
+$c-neut1      : #000000;
+$c-neut1Op    : #00000090;
+$c-neut2      : #4A4A4A;
+$c-neut3      : #777777;
+$c-neut3_1    : #78787880;
+$c-neut4      : #BDBDBD;
+$c-neut5      : #F2F2F2;
+$c-neut6      : #FAFAFA;
+$c-neut7      : #FFF;
+$c-neut8      : #E5E5E5;
+// *************************************
+// *************** COLORS **************
+$product_box-hadow      : 0.3vw 0.2vw 0.8vw 0.3vw rgba(0, 0, 0, 0.2); 
+$product_overlay_shadow : rgba(0, 0, 0, 0.2);

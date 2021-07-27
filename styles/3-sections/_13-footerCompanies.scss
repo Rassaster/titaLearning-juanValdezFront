@@ -1,0 +1,82 @@
+.footer__companies  {
+  h2 {
+    display: none;
+  }
+  &__payment {
+    width: 100vw;
+    margin: 0 calc(100vw * ( 113 / 1366));
+    @include flexContainerConfig(row, nowrap, space-between, center);
+    color: $c-neut1;
+    h5 {
+      @include typoSet($fw-medium, $fsz-prices1, normal , $ft-main);
+    }
+    p {
+      @include typoSet($fw-regular, $fsz-footer, normal , $ft-main);
+    }
+    img {
+      height: calc(100vw * (16 / 1366));
+    }
+    img:nth-child(9) {
+      padding-right: calc(100vw * (20 / 1366));
+      border-right: 0.5px solid $c-neut7;
+    }
+    img:nth-child(10), img:nth-child(11) {
+      height: calc(100vw * (40 / 1366));
+    }
+    img:nth-child(15) {
+      width: calc(100vw * (110 / 1366));
+    }
+  }
+}
+.footer__copyRight {
+  padding-top: calc(100vw * (20 / 1366));
+  padding-bottom: calc(100vw * (29 / 1366));
+  @include flexContainerConfig(row, nowrap, center, center);
+  @include typoSet($fw-regular, $fsz-body, $flh-body , $ft-main);
+  color: $c-neut1;
+  &__logoJV {
+    display: none;
+  }
+}
+// ******************************************************************************
+// ******************************************************************************
+// *************************MEDIA QUERIES****************************************
+@media screen and (max-width: 768px) {
+  .footer__companies {
+    @include flexContainerConfig(column, nowrap, center, flex-start);
+    padding-left: calc(100vw * (35 / 375));
+    h2 {
+      display: block;
+      width: calc(100vw * (290 / 375));
+      @include typoSet($fw-medium, $fsz-subtitleMobile, normal, $ft-main);
+      color: $c-main2;
+      &::after {
+        margin-left: calc(100vw * (130 / 375));
+        display: inline-block;
+        content: ' ';
+        background-image: url(../assets/svg/controles_SVGs/openMenu-init.svg);
+        background-size: calc(100vw * (12 / 375)) calc(100vw * (6 / 375));
+        background-position: center;
+        background-repeat: no-repeat;
+        width: calc(100vw * (12 / 375));
+        height: calc(100vw * (10 / 375));
+      }
+    }
+    &__payment {
+      display: none;
+    }
+  }
+  .footer__copyRight {
+    &__logoJV {
+      display: block;
+      width: calc(100vw * (120 / 375));
+      height: calc(100vw * (64 / 375));
+      margin-bottom: calc(100vw * (32 / 375));
+    }
+    padding-top: calc(100vw * (31 / 375));
+    padding-bottom: calc(100vw * (32 / 375));
+    @include flexContainerConfig(column, nowrap, center, center);
+    @include typoSet($fw-regular, $fsz-bodyMobile, normal, $ft-main);
+    color: $c-main2;
+  }
+}

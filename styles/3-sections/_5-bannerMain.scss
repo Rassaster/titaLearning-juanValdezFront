@@ -1,0 +1,150 @@
+.section__mainBanner {
+  width: 100vw;
+  &__slider {
+    border: none;
+    position: relative;
+    width: 100vw;
+    height: auto;
+    &__paginator {
+      border: none;
+      position: absolute;
+      bottom: calc(100vw * (14 / 1366));
+      left: calc(100vw * (657 / 1366));
+      &__circle {
+        border: 1px solid $c-neut7;
+        &__active {
+          border: 1px solid $c-main1;
+          background-color: $c-main1;
+        }
+      }
+    }
+    &__wrapper {
+      height: auto;
+      border: none;
+      width: 100vw;
+      height: fit-content;
+      &__slide {
+        height: auto;
+        border: none;
+        position: relative;
+        margin: unset;
+        min-width: 100vw;
+        height: calc(100vw * (410 / 1366));
+        &:nth-of-type(1) {
+          .section__mainBanner__slider__wrapper__slide__img {
+            width: 100vw;
+            &:nth-of-type(2) {
+              display: none;
+            }
+          }
+          .section__mainBanner__slider__wrapper__slide__colombia {
+            position: absolute;
+            top: calc(100vw * (82 / 1366)); // = 82px / 1366px;
+            left: calc(100vw * (163 / 1366)); // = 163px / 1366px;
+            width: calc(100vw * (286 / 1366)); // = 286px / 1366px;
+            height: calc(100vw * (85 / 1366)); // = 85px / 1366px;
+          }
+          .section__mainBanner__slider__wrapper__slide__disfrutaSu {
+            position: absolute;
+            top: calc(100vw * (174 / 1366)); // = 184px / 1366px;
+            left: calc(100vw * (163 / 1366)); // = 163px / 1366px;
+            width: calc(100vw * (402 / 1366)); // = 359px / 1366px;
+            height: calc(100vw * (55 / 1366)); // = 43px / 1366px;
+          }
+          .section__mainBanner__slider__wrapper__slide__button {
+            position: absolute;
+            top: calc(100vw * (296 / 1366)); // = 296px / 1366px;
+            left: calc(100vw * (163 / 1366)); // = 163px / 1366;
+          }
+        }
+        &:nth-of-type(2) {
+          .section__mainBanner__slider__wrapper__slide__img {
+            width: 100vw;
+          }
+          .section__mainBanner__slider__wrapper__slide__button {
+            position: absolute;
+            bottom: calc(100vw * (10 / 1366)); // = 296px / 1366px;
+            left: calc(100vw * (120 / 1366)); // = 163px / 1366;
+          }
+        } 
+        &:nth-of-type(3) {
+          .section__mainBanner__slider__wrapper__slide__img {
+            width: 100vw;
+          }
+          .section__mainBanner__slider__wrapper__slide__colombia {
+            position: absolute;
+            top: calc(100vw * (82 / 1366)); // = 82px / 1366px;
+            left: calc(100vw * (163 / 1366)); // = 163px / 1366px;
+            width: calc(100vw * (286 / 1366)); // = 286px / 1366px;
+            height: calc(100vw * (85 / 1366)); // = 85px / 1366px;
+          }
+          .section__mainBanner__slider__wrapper__slide__disfrutaSu {
+            position: absolute;
+            top: calc(100vw * (174 / 1366)); // = 184px / 1366px;
+            left: calc(100vw * (163 / 1366)); // = 163px / 1366px;
+            width: calc(100vw * (402 / 1366)); // = 359px / 1366px;
+            height: calc(100vw * (55 / 1366)); // = 43px / 1366px;
+          }
+          .section__mainBanner__slider__wrapper__slide__button {
+            position: absolute;
+            top: calc(100vw * (296 / 1366)); // = 296px / 1366px;
+            left: calc(100vw * (163 / 1366)); // = 163px / 1366;
+          }
+        }
+      }
+    }
+  }
+}
+// ******************************************************************************
+// ******************************************************************************
+// *************************MEDIA QUERIES****************************************
+@media screen and (max-width: 768px) {
+  .section__mainBanner {
+    &__slider {
+      &__paginator {
+        display: none;
+      }
+      &__wrapper {
+        &__slide {
+          min-width: 100vw;
+          height: calc(100vw * (431 / 375));
+          &:nth-of-type(1), &:nth-of-type(2), &:nth-of-type(3) {
+            .section__mainBanner__slider__wrapper__slide__img {
+              width: 100vw;
+              &:nth-of-type(1) {
+                display: none;
+              }
+              &:nth-of-type(2) {
+                display: block;
+              }
+            }    
+            .section__mainBanner__slider__wrapper__slide__colombia {
+              position: absolute;
+              top: calc(100vw * (33 / 375)); 
+              left: calc(100vw * (24 / 375));
+              width: calc(100vw * (160 / 375)); 
+              height: calc(100vw * (35 / 375)); 
+            }
+            .section__mainBanner__slider__wrapper__slide__disfrutaSu {
+              position: absolute;
+              top: calc(100vw * (78.5 / 375)); 
+              left: calc(100vw * (24 / 375)); 
+              width: calc(100vw * (201 / 375)); 
+              height: calc(100vw * (27 / 375)); 
+            }
+            .section__mainBanner__slider__wrapper__slide__button {
+              position: absolute;
+              top: calc(100vw * (296 / 375));
+              left: calc(100vw * (163 / 375));
+            }
+            .section__mainBanner__slider__wrapper__slide__button {
+              position: absolute;
+              top: calc(100vw * (353 / 375)); 
+              left: calc(100vw * (98 / 375));
+            }
+          }
+        }
+      }
+    }
+  }
+}

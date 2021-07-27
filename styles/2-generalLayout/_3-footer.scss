@@ -1,0 +1,19 @@
+footer {
+  border-top-left-radius: calc(100vw * (25 / 1366));
+  border-top-right-radius: calc(100vw * (25 / 1366));
+  overflow-x: hidden;
+  width: 100vw;
+  background-color: $c-neut8;
+  position: relative;
+  top: calc(100vw * (177 / 1366))
+}
+// ******************************************************************************
+// ******************************************************************************
+// *************************MEDIA QUERIES****************************************
+@media screen and (max-width: 768px) {
+  footer {
+    border-top-left-radius: calc(100vw * (25 / 375));
+    border-top-right-radius: calc(100vw * (25 / 375));
+    top: calc(100vw * (200 / 375));
+  }
+}
